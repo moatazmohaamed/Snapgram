@@ -89,10 +89,10 @@ client/
 ### 👨‍💼 Admin Panel
 
 #### User Management
-![User Management](../screens/admin/Users%20managment.png)
+![User Management](/screens/admin/Users%20managment.png)
 
 #### Post Management
-![Post Management](../screens/admin/Posts%20management.png)
+![Post Management](/screens/admin/Posts%20management.png)
 
 ---
 
