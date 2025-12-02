@@ -54,35 +54,35 @@ client/
 ### 🔐 Authentication Pages
 
 #### Sign In
-![Sign In Page](../screens/auth/login.png)
+![Sign In Page](/screens/auth/login.png)
 
 #### Sign Up
-![Sign Up Page](../screens/auth/sign%20up.png)
+![Sign Up Page](/screens/auth/sign%20up.png)
 
 #### Forgot Password
-![Forgot Password](../screens/auth/forgot%20pass.png)
+![Forgot Password](/screens/auth/forgot%20pass.png)
 
 #### OTP Verification
-![OTP Verification](../screens/auth/verify%20otp.png)
+![OTP Verification](/screens/auth/verify%20otp.png)
 
 ---
 
 ### 📱 Main Application
 
 #### Home Feed
-![Home Page](../screens/home%20page.png)
+![Home Page](/screens/home%20page.png)
 
 #### Explore
-![Explore Page](../screens/explore.png)
+![Explore Page](/screens/explore.png)
 
 #### Post Details
-![Post Details](../screens/post%20details.png)
+![Post Details](/screens/post%20details.png)
 
 #### User Profile
-![User Profile](../screens/user%20profile.png)
+![User Profile](/screens/user%20profile.png)
 
 #### Saved Posts
-![Saved Posts](../screens/saved%20posts.png)
+![Saved Posts](/screens/saved%20posts.png)
 
 ---
 
