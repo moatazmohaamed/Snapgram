@@ -21,6 +21,26 @@ const routes = {
     '404': {
         path: '../pages/404.html',
         title: 'Not Found'
+    },
+    '/feed': {
+        path: '../pages/feed.html',
+        title: 'Feed'
+    },
+    '/saved': {
+        path: '../pages/saved.html',
+        title: 'Saved Posts'
+    },
+    '/users-admin': {
+        path: '../admin/pages/dash-users.html',
+        title: 'Users Management'
+    },
+    '/user-profile': {
+        path: '../pages/user-profile.html',
+        title: 'User Profile'
+    },
+    '/people': {
+        path: '../pages/people.html',
+        title: 'People'
     }
 }
 
@@ -44,6 +64,17 @@ const handleLocation = async () => {
             root.innerHTML = doc.body.innerHTML;
         } else {
             console.error('Root element not found');
+        }
+
+        // reusable components
+        const sidebarContainer = document.querySelector('#sidebar-container');
+        if (sidebarContainer && window.componentLoader) {
+            await window.componentLoader.insert('../components/sidebar.html', sidebarContainer);
+        }
+
+        const dashSidebarContainer = document.querySelector('#dash-sidebar');
+        if (dashSidebarContainer && window.componentLoader) {
+            await window.componentLoader.insert('../admin/components/dash-sidebar.html', dashSidebarContainer);
         }
 
         document.title = route.title;

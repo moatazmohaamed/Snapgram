@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link rel="shortcut icon" href="/client/assets/icons/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/client/css/main.css">
+    <script src="/client/config/tailwind.config.js"></script>
+</head>
+
+<body class="bg-background-light font-display dark:bg-background-dark">
+    <div class="relative min-h-screen w-full overflow-x-hidden">
+        <div class="flex h-full flex-col">
+            <div class="flex justify-center">
+                <div class="flex w-full max-w-7xl justify-center">
+                    <div id="sidebar-container"></div>
+
+                    <main class="w-full border-x-0 md:border-x border-border-light">
+                        <div
+                            class="sticky top-0 z-10 border-b border-border-light bg-background-light/80 backdrop-blur-md px-3 md:px-4 py-3 dark:bg-background-dark/80">
+                            <h2
+                                class="text-base md:text-lg font-extrabold text-text-primary-light dark:text-text-primary-dark">
+                                Profile</h2>
+                        </div>
+
+                        <div class="p-3 md:p-4 flex justify-center flex-col">
+                            <div
+                                class="bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-slate-100 dark:border-slate-800 p-4 md:p-6 mb-4 md:mb-6">
+                                <div class="flex flex-col gap-4 md:gap-6">
+                                    <div class="flex flex-col sm:flex-row gap-4 sm:justify-between sm:items-start">
+                                        <div class="flex items-start gap-3 md:gap-5">
+                                            <div>
+                                                <img src="/client/assets/images/avatar.png"
+                                                    class="rounded-full size-16 md:size-20 ring-2 ring-slate-100 dark:ring-slate-800"
+                                                    alt="User avatar">
+                                            </div>
+                                            <div class="flex flex-col justify-center">
+                                                <p class="text-slate-900 dark:text-white text-xl md:text-2xl font-bold">
+                                                    Motzzzzzzz</p>
+                                                <p class="text-slate-500 dark:text-slate-400 text-sm md:text-base">
+                                                    @motzzzzzzz</p>
+                                                <p class="text-slate-600 dark:text-slate-300 text-sm md:text-base mt-2">
+                                                    Digital creator and coffee enthusiast. Exploring the world one cup
+                                                    at a
+                                                    time.</p>
+                                            </div>
+                                        </div>
+                                        <button
+                                            class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-9 md:h-10 px-4 md:px-5 bg-primary text-white text-xs md:text-sm font-bold w-full sm:w-auto hover:bg-primary/90 transition-colors">
+                                            <span class="truncate">Edit Profile</span>
+                                        </button>
+                                    </div>
+
+                                    <div class="grid grid-cols-3 gap-3 md:gap-4">
+                                        <div
+                                            class="flex flex-col gap-1 rounded-lg border border-slate-200 dark:border-slate-700 p-3 md:p-4 items-center text-center">
+                                            <p class="text-slate-900 dark:text-white text-lg md:text-2xl font-bold">
+                                                1,204
+                                            </p>
+                                            <p class="text-slate-500 dark:text-slate-400 text-xs md:text-sm">Followers
+                                            </p>
+                                        </div>
+                                        <div
+                                            class="flex flex-col gap-1 rounded-lg border border-slate-200 dark:border-slate-700 p-3 md:p-4 items-center text-center">
+                                            <p class="text-slate-900 dark:text-white text-lg md:text-2xl font-bold">560
+                                            </p>
+                                            <p class="text-slate-500 dark:text-slate-400 text-xs md:text-sm">Following
+                                            </p>
+                                        </div>
+                                        <div
+                                            class="flex flex-col gap-1 rounded-lg border border-slate-200 dark:border-slate-700 p-3 md:p-4 items-center text-center">
+                                            <p class="text-slate-900 dark:text-white text-lg md:text-2xl font-bold">88
+                                            </p>
+                                            <p class="text-slate-500 dark:text-slate-400 text-xs md:text-sm">Posts</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3
+                                class="text-slate-900 dark:text-white text-lg md:text-xl font-bold px-2 pb-3 md:pb-4 pt-2">
+                                Posts
+                            </h3>
+
+                            <div class="flex flex-col  gap-4 md:gap-6 ">
+
+                                <article
+                                    class="bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-slate-100 dark:border-slate-800 overflow-hidden  justify-center ">
+                                    <div class="p-3 md:p-5">
+                                        <div class="flex items-center  gap-2 md:gap-3 mb-3 md:mb-4">
+                                            <div>
+                                                <img src="/client/assets/images/avatar.png"
+                                                    class="rounded-full size-8 md:size-10" alt="avatar">
+                                            </div>
+                                            <div>
+                                                <p
+                                                    class="text-slate-900 dark:text-white text-sm md:text-base font-semibold">
+                                                    Motzzzzzzz</p>
+                                                <p class="text-slate-500 dark:text-slate-400 text-xs md:text-sm">2 hours
+                                                    ago
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <p class="text-slate-700 dark:text-slate-300 text-sm md:text-base mb-3 md:mb-4">
+                                            Spent the entire afternoon soaking up the sun and enjoying the waves.
+                                            Couldn't
+                                            have asked for a better day. Feeling so refreshed and grateful. #beachday
+                                            #ocean
+                                            #sunset
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <img src="/client/assets/images/mock-home.jpg" class="aspect-video w-full"
+                                            alt="mock-home">
+                                    </div>
+                                    <div class="p-2 md:p-3 border-t border-slate-100 dark:border-slate-700">
+                                        <div class="flex items-center justify-start gap-2 md:gap-4 -ml-1 md:-ml-2">
+                                            <div
+                                                class="flex items-center justify-center gap-1 md:gap-1.5 px-1.5 md:px-2 py-1 md:py-1.5 rounded-full hover:bg-red-50 group cursor-pointer">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                    fill="currentColor"
+                                                    class="size-4 md:size-5 text-slate-500 group-hover:text-red-500 dark:text-slate-400">
+                                                    <path d="M0 0h24v24H0V0z" fill="none" />
+                                                    <path
+                                                        d="m12 21.35-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3c3.08 0 5.5 2.42 5.5 5.5 0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                                                </svg>
+                                                <p
+                                                    class="text-xs md:text-sm font-medium leading-normal text-slate-500 group-hover:text-red-500 dark:text-slate-400">
+                                                    Like</p>
+                                            </div>
+                                            <div
+                                                class="flex items-center justify-center gap-1 md:gap-1.5 px-1.5 md:px-2 py-1 md:py-1.5 rounded-full hover:bg-blue-50 group cursor-pointer">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                    fill="currentColor"
+                                                    class="size-4 md:size-5 text-slate-500 group-hover:text-blue-500 dark:text-slate-400">
+                                                    <path d="M0 0h24v24H0V0z" fill="none" />
+                                                    <path
+                                                        d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z" />
+                                                </svg>
+                                                <p
+                                                    class="text-xs md:text-sm font-medium leading-normal text-slate-500 group-hover:text-blue-500 dark:text-slate-400">
+                                                    Comment</p>
+                                            </div>
+                                            <div
+                                                class="flex items-center justify-center gap-1 md:gap-1.5 px-1.5 md:px-2 py-1 md:py-1.5 rounded-full hover:bg-green-50 group cursor-pointer">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                    fill="currentColor"
+                                                    class="size-4 md:size-5 text-slate-500 group-hover:text-green-500 dark:text-slate-400">
+                                                    <path d="M0 0h24v24H0V0z" fill="none" />
+                                                    <path
+                                                        d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.51.48 1.2.77 1.96.77 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L7.05 11.9c-.51-.48-1.2-.77-1.96-.77-1.66 0-3 1.34-3 3s1.34 3 3 3c.76 0 1.44-.3 1.96-.77l7.05 4.11c-.05.23-.09.46-.09.7 0 1.66 1.34 3 3 3s3-1.34 3-3-1.34-3-3-3z" />
+                                                </svg>
+                                                <p
+                                                    class="text-xs md:text-sm font-medium leading-normal text-slate-500 group-hover:text-green-500 dark:text-slate-400">
+                                                    Share</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+
+
+                            </div>
+                        </div>
+                    </main>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

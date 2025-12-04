@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link rel="shortcut icon" href="/client/assets/icons/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/client/css/main.css">
+    <script src="/client/config/tailwind.config.js"></script>
+</head>
+
+<body
+    class="font-display bg-background-light dark:bg-background-dark text-text-primary-light dark:text-text-primary-dark">
+    <div class="flex min-h-screen">
+        <div id="dash-sidebar"></div>
+
+        <main class="flex-1 p-4 md:p-8">
+            <div class="max-w-7xl mx-auto">
+                <header class="flex flex-wrap justify-between items-center gap-4 mb-6 md:mb-8">
+                    <div class="flex flex-col gap-1">
+                        <h1 class="text-2xl md:text-3xl font-bold tracking-tight">User Management</h1>
+                        <p class="text-slate-500 dark:text-slate-400 text-sm md:text-base">Manage all users in the
+                            system.</p>
+                    </div>
+                    <button
+                        class="flex items-center justify-center gap-2 h-9 md:h-10 px-4 md:px-5 bg-primary text-white rounded-lg text-sm font-medium shadow-sm hover:bg-primary/90 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-5">
+                            <path d="M0 0h24v24H0V0z" fill="none" />
+                            <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
+                        </svg>
+                        <span class="truncate">Add User</span>
+                    </button>
+                </header>
+
+                <!-- Toolbar & Filters -->
+                <div
+                    class="mb-4 md:mb-6 bg-white dark:bg-slate-900 p-3 md:p-4 rounded-lg shadow-sm border border-slate-200 dark:border-slate-800">
+                    <div class="flex flex-col sm:flex-row gap-3 md:gap-4">
+                        <!-- Search Bar -->
+                        <div class="flex-grow">
+                            <label class="relative">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                    class="absolute left-3 md:left-4 top-1/2 -translate-y-1/2 size-4 md:size-5 text-slate-400 dark:text-slate-500 pointer-events-none">
+                                    <path d="M0 0h24v24H0V0z" fill="none" />
+                                    <path
+                                        d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" />
+                                </svg>
+                                <input
+                                    class="w-full h-10 md:h-12 pl-9 md:pl-12 pr-3 md:pr-4 bg-background-light dark:bg-background-dark rounded-lg border border-slate-200 dark:border-slate-700 text-sm md:text-base focus:ring-2 focus:ring-primary focus:border-transparent transition"
+                                    placeholder="Search by name, email..." type="text" />
+                            </label>
+                        </div>
+                        <!-- Filter Dropdown -->
+                        <div class="flex items-center">
+                            <div class="relative w-full sm:w-48">
+                                <select
+                                    class="w-full h-10 md:h-12 px-3 md:px-4 appearance-none bg-background-light dark:bg-background-dark rounded-lg border border-slate-200 dark:border-slate-700 text-sm md:text-base focus:ring-2 focus:ring-primary focus:border-transparent transition">
+                                    <option>All Statuses</option>
+                                    <option>Active</option>
+                                    <option>Inactive</option>
+                                    <option>Banned</option>
+                                </select>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                    class="absolute right-2 md:right-3 top-1/2 -translate-y-1/2 size-5 text-slate-400 dark:text-slate-500 pointer-events-none">
+                                    <path d="M0 0h24v24H0V0z" fill="none" />
+                                    <path d="M7 10l5 5 5-5H7z" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- User Data Table -->
+                <div
+                    class="bg-white dark:bg-slate-900 rounded-lg shadow-sm border border-slate-200 dark:border-slate-800 overflow-hidden">
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-sm text-left">
+                            <thead
+                                class="bg-slate-50 dark:bg-slate-800/50 text-xs text-slate-600 dark:text-slate-400 uppercase tracking-wider">
+                                <tr>
+                                    <th class="p-3 md:p-4" scope="col">
+                                        <input
+                                            class="rounded border-slate-300 dark:border-slate-600 text-primary focus:ring-primary"
+                                            type="checkbox" />
+                                    </th>
+                                    <th class="px-4 md:px-6 py-3" scope="col">User</th>
+                                    <th class="px-4 md:px-6 py-3" scope="col">Email</th>
+                                    <th class="px-4 md:px-6 py-3 hidden md:table-cell" scope="col">Date Joined</th>
+                                    <th class="px-4 md:px-6 py-3" scope="col">Status</th>
+                                    <th class="px-4 md:px-6 py-3 text-right" scope="col">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr
+                                    class="border-b border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800/50">
+                                    <td class="w-4 p-3 md:p-4">
+                                        <input
+                                            class="rounded border-slate-300 dark:border-slate-600 text-primary focus:ring-primary"
+                                            type="checkbox" />
+                                    </td>
+                                    <td class="px-4 md:px-6 py-4 whitespace-nowrap">
+                                        <div class="flex items-center gap-2 md:gap-3">
+                                            <img class="size-8 md:size-10 rounded-full"
+                                                src="/client/assets/images/avatar.png" alt="User avatar" />
+                                            <div>
+                                                <div class="font-medium text-sm md:text-base">Olivia Rhye</div>
+                                                <div class="text-slate-500 dark:text-slate-400 text-xs">@olivia</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-4 md:px-6 py-4 text-sm">olivia@example.com</td>
+                                    <td class="px-4 md:px-6 py-4 text-sm hidden md:table-cell">Jan 15, 2023</td>
+                                    <td class="px-4 md:px-6 py-4">
+                                        <span
+                                            class="inline-flex items-center gap-1.5 text-xs font-medium px-2.5 py-1 rounded-full bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400">
+                                            <span class="size-1.5 rounded-full bg-green-500"></span>Active
+                                        </span>
+                                    </td>
+                                    <td class="px-4 md:px-6 py-4 text-right">
+                                        <button
+                                            class="p-2 text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white rounded-full hover:bg-slate-100 dark:hover:bg-slate-700">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                fill="currentColor" class="size-5">
+                                                <path d="M0 0h24v24H0V0z" fill="none" />
+                                                <path
+                                                    d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" />
+                                            </svg>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr
+                                    class="border-b border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800/50">
+                                    <td class="w-4 p-3 md:p-4">
+                                        <input
+                                            class="rounded border-slate-300 dark:border-slate-600 text-primary focus:ring-primary"
+                                            type="checkbox" />
+                                    </td>
+                                    <td class="px-4 md:px-6 py-4 whitespace-nowrap">
+                                        <div class="flex items-center gap-2 md:gap-3">
+                                            <img class="size-8 md:size-10 rounded-full"
+                                                src="/client/assets/images/avatar.png" alt="User avatar" />
+                                            <div>
+                                                <div class="font-medium text-sm md:text-base">Phoenix Baker</div>
+                                                <div class="text-slate-500 dark:text-slate-400 text-xs">@phoenix</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-4 md:px-6 py-4 text-sm">phoenix@example.com</td>
+                                    <td class="px-4 md:px-6 py-4 text-sm hidden md:table-cell">Feb 02, 2023</td>
+                                    <td class="px-4 md:px-6 py-4">
+                                        <span
+                                            class="inline-flex items-center gap-1.5 text-xs font-medium px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-400">
+                                            <span class="size-1.5 rounded-full bg-slate-500"></span>Inactive
+                                        </span>
+                                    </td>
+                                    <td class="px-4 md:px-6 py-4 text-right">
+                                        <button
+                                            class="p-2 text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white rounded-full hover:bg-slate-100 dark:hover:bg-slate-700">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                fill="currentColor" class="size-5">
+                                                <path d="M0 0h24v24H0V0z" fill="none" />
+                                                <path
+                                                    d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" />
+                                            </svg>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr
+                                    class="border-b border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800/50">
+                                    <td class="w-4 p-3 md:p-4">
+                                        <input
+                                            class="rounded border-slate-300 dark:border-slate-600 text-primary focus:ring-primary"
+                                            type="checkbox" />
+                                    </td>
+                                    <td class="px-4 md:px-6 py-4 whitespace-nowrap">
+                                        <div class="flex items-center gap-2 md:gap-3">
+                                            <img class="size-8 md:size-10 rounded-full"
+                                                src="/client/assets/images/avatar.png" alt="User avatar" />
+                                            <div>
+                                                <div class="font-medium text-sm md:text-base">Lana Steiner</div>
+                                                <div class="text-slate-500 dark:text-slate-400 text-xs">@lana</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-4 md:px-6 py-4 text-sm">lana@example.com</td>
+                                    <td class="px-4 md:px-6 py-4 text-sm hidden md:table-cell">Mar 20, 2023</td>
+                                    <td class="px-4 md:px-6 py-4">
+                                        <span
+                                            class="inline-flex items-center gap-1.5 text-xs font-medium px-2.5 py-1 rounded-full bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-400">
+                                            <span class="size-1.5 rounded-full bg-red-500"></span>Banned
+                                        </span>
+                                    </td>
+                                    <td class="px-4 md:px-6 py-4 text-right">
+                                        <button
+                                            class="p-2 text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white rounded-full hover:bg-slate-100 dark:hover:bg-slate-700">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                fill="currentColor" class="size-5">
+                                                <path d="M0 0h24v24H0V0z" fill="none" />
+                                                <path
+                                                    d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" />
+                                            </svg>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/50">
+                                    <td class="w-4 p-3 md:p-4">
+                                        <input
+                                            class="rounded border-slate-300 dark:border-slate-600 text-primary focus:ring-primary"
+                                            type="checkbox" />
+                                    </td>
+                                    <td class="px-4 md:px-6 py-4 whitespace-nowrap">
+                                        <div class="flex items-center gap-2 md:gap-3">
+                                            <img class="size-8 md:size-10 rounded-full"
+                                                src="/client/assets/images/avatar.png" alt="User avatar" />
+                                            <div>
+                                                <div class="font-medium text-sm md:text-base">Demi Wilkinson</div>
+                                                <div class="text-slate-500 dark:text-slate-400 text-xs">@demi</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-4 md:px-6 py-4 text-sm">demi@example.com</td>
+                                    <td class="px-4 md:px-6 py-4 text-sm hidden md:table-cell">Apr 05, 2023</td>
+                                    <td class="px-4 md:px-6 py-4">
+                                        <span
+                                            class="inline-flex items-center gap-1.5 text-xs font-medium px-2.5 py-1 rounded-full bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400">
+                                            <span class="size-1.5 rounded-full bg-green-500"></span>Active
+                                        </span>
+                                    </td>
+                                    <td class="px-4 md:px-6 py-4 text-right">
+                                        <button
+                                            class="p-2 text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white rounded-full hover:bg-slate-100 dark:hover:bg-slate-700">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                fill="currentColor" class="size-5">
+                                                <path d="M0 0h24v24H0V0z" fill="none" />
+                                                <path
+                                                    d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" />
+                                            </svg>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Pagination -->
+                    <nav
+                        class="flex flex-col md:flex-row justify-between items-start md:items-center space-y-3 md:space-y-0 p-3 md:p-4 border-t border-slate-200 dark:border-slate-700">
+                        <span class="text-xs md:text-sm font-normal text-slate-500 dark:text-slate-400">
+                            Showing <span class="font-semibold text-slate-900 dark:text-white">1-10</span> of
+                            <span class="font-semibold text-slate-900 dark:text-white">250</span>
+                        </span>
+                        <ul class="inline-flex items-stretch -space-x-px text-sm">
+                            <li>
+                                <a class="flex items-center justify-center h-full py-1.5 px-2 md:px-3 ml-0 text-slate-500 dark:text-slate-400 bg-white dark:bg-slate-900 rounded-l-lg border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-700 hover:text-slate-900 dark:hover:text-white"
+                                    href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                        class="size-4">
+                                        <path d="M0 0h24v24H0V0z" fill="none" />
+                                        <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12l4.58-4.59z" />
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="flex items-center justify-center text-sm py-2 px-3 leading-tight text-slate-500 dark:text-slate-400 bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-700 hover:text-slate-900 dark:hover:text-white"
+                                    href="#">1</a>
+                            </li>
+                            <li>
+                                <a class="flex items-center justify-center text-sm py-2 px-3 leading-tight text-primary bg-primary/10 border border-primary hover:bg-primary/20 hover:text-primary"
+                                    href="#">2</a>
+                            </li>
+                            <li>
+                                <a class="flex items-center justify-center text-sm py-2 px-3 leading-tight text-slate-500 dark:text-slate-400 bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-700 hover:text-slate-900 dark:hover:text-white"
+                                    href="#">...</a>
+                            </li>
+                            <li>
+                                <a class="flex items-center justify-center text-sm py-2 px-3 leading-tight text-slate-500 dark:text-slate-400 bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-700 hover:text-slate-900 dark:hover:text-white"
+                                    href="#">25</a>
+                            </li>
+                            <li>
+                                <a class="flex items-center justify-center h-full py-1.5 px-2 md:px-3 leading-tight text-slate-500 dark:text-slate-400 bg-white dark:bg-slate-900 rounded-r-lg border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-700 hover:text-slate-900 dark:hover:text-white"
+                                    href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                        class="size-4">
+                                        <path d="M0 0h24v24H0V0z" fill="none" />
+                                        <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6-6-6z" />
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </main>
+    </div>
+
+
+
+</body>
+
+</html>
