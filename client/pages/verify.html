@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Verify Code</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
+  <link rel="shortcut icon" href="/client/assets/icons/favicon.png" type="image/x-icon">
+  <script src="/client/config/tailwind.config.js"></script>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-gray-800 dark:text-gray-200 antialiased">
+  <div class="flex h-screen w-full">
+    <div class="flex w-full flex-col items-center justify-center bg-background-light dark:bg-background-dark p-8 lg:w-1/2">
+      <div class="w-full max-w-sm space-y-8">
+        <div class="flex flex-col items-center text-center">
+          <div class="mb-4 flex items-center gap-3">
+            <svg class="h-10 w-10 text-primary" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path clip-rule="evenodd" d="M12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2ZM12 4C16.4183 4 20 7.58172 20 12C20 16.4183 16.4183 20 12 20C7.58172 20 4 16.4183 4 12C4 7.58172 7.58172 4 12 4ZM12 7C9.23858 7 7 9.23858 7 12C7 14.7614 9.23858 17 12 17C14.7614 17 17 14.7614 17 12C17 9.23858 14.7614 7 12 7ZM12 9C13.6569 9 15 10.3431 15 12C15 13.6569 13.6569 15 12 15C10.3431 15 9 13.6569 9 12C9 10.3431 10.3431 9 12 9Z" fill-rule="evenodd"></path>
+            </svg>
+            <span class="text-3xl font-bold text-gray-900 dark:text-white">Snapgram</span>
+          </div>
+          <h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Verify Code</h1>
+          <p class="mt-2 text-sm text-gray-500 dark:text-gray-400">Enter the 6-digit code sent to your phone</p>
+        </div>
+        <form id="verifyForm" class="space-y-6">
+          <div class="flex justify-between gap-2">
+            <input type="text" maxlength="1" class="w-12 h-12 text-center text-xl border border-gray-300 dark:border-gray-700 rounded-md bg-gray-50 dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-primary" />
+            <input type="text" maxlength="1" class="w-12 h-12 text-center text-xl border border-gray-300 dark:border-gray-700 rounded-md bg-gray-50 dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-primary" />
+            <input type="text" maxlength="1" class="w-12 h-12 text-center text-xl border border-gray-300 dark:border-gray-700 rounded-md bg-gray-50 dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-primary" />
+            <input type="text" maxlength="1" class="w-12 h-12 text-center text-xl border border-gray-300 dark:border-gray-700 rounded-md bg-gray-50 dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-primary" />
+            <input type="text" maxlength="1" class="w-12 h-12 text-center text-xl border border-gray-300 dark:border-gray-700 rounded-md bg-gray-50 dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-primary" />
+            <input type="text" maxlength="1" class="w-12 h-12 text-center text-xl border border-gray-300 dark:border-gray-700 rounded-md bg-gray-50 dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-primary" />
+          </div>
+          <div>
+            <button type="submit" class="flex w-full justify-center rounded-md border border-transparent bg-indigo-700 py-2 px-4 text-sm font-semibold text-white shadow-sm hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 dark:focus:ring-offset-background-dark">
+              Verify
+            </button>
+          </div>
+        </form>
+        <p class="text-center text-sm text-gray-500 dark:text-gray-400">
+          Didn't receive a code?
+          <a class="font-semibold leading-6 text-indigo-500 hover:text-indigo-700" href="#/forgot-password" onclick="router(event)">
+            Resend
+          </a>
+        </p>
+      </div>
+    </div>
+    <div class="hidden w-1/2 lg:block">
+      <img alt="Verify code illustration" class="h-full w-full object-cover" src="../assets/images/side-img.svg" />
+    </div>
+  </div>
+  <script type="module" src="../js/verify.js"></script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Post Details</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style> body { background: #f3f4f7; } </style>
+</head>
+<body class="font-sans">
+  <nav class="bg-white shadow-sm px-8 py-4 border-b border-gray-100 flex justify-between items-center">
+    <h1 class="text-xl font-bold text-gray-800">Post Details</h1>
+    <a href="#/feed" onclick="router(event)" class="text-blue-600 hover:underline">Back to Feed</a>
+  </nav>
+  <div class="max-w-3xl mx-auto mt-8" id="postContainer"></div>
+  <script type="module" src="../js/post-details.js"></script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Home - Snapgram</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
+    <link rel="shortcut icon" href="/client/assets/icons/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/client/css/main.css">
+    <script src="/client/config/tailwind.config.js"></script>
+</head>
+<body class="bg-background-light font-display dark:bg-background-dark">
+    <div class="relative min-h-screen w-full overflow-x-hidden">
+        <div class="flex h-full flex-col">
+            <div class="flex justify-center">
+                <div class="flex w-full max-w-7xl justify-center">
+                    <div id="sidebar-container"></div>
+
+                    <main class="w-full md:max-w-xl lg:max-w-2xl border-x-0 md:border-x border-border-light dark:border-slate-800">
+                        <div class="sticky top-0 z-10 border-b border-border-light dark:border-slate-800 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md px-3 md:px-4 py-3">
+                            <h2 class="text-base md:text-lg font-bold text-text-primary-light dark:text-text-primary-dark">Home</h2>
+                        </div>
+
+                        <div class="border-b border-border-light dark:border-slate-800 p-3 md:p-4">
+                            <div class="flex items-start gap-2 md:gap-4">
+                                <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-8 md:size-10 shrink-0 mt-1" style="background-image: url('/client/assets/images/avatar.png');"></div>
+                                <div class="flex flex-1 flex-col">
+                                    <textarea id="postText" class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden border-0 bg-transparent p-0 text-text-primary-light dark:text-text-primary-dark placeholder:text-text-secondary-light dark:placeholder:text-slate-500 focus:outline-0 focus:ring-0 text-base md:text-lg font-normal leading-normal" placeholder="What's on your mind?" rows="2"></textarea>
+                                    <div class="flex items-center justify-between pt-2 md:pt-3">
+                                        <div class="flex items-center gap-0.5 md:gap-1">
+                                            <button class="flex items-center justify-center p-1.5 md:p-2 rounded-full hover:bg-primary/10 transition-colors">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4 md:size-5 text-primary">
+                                                    <path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z" />
+                                                </svg>
+                                            </button>
+                                            <button class="flex items-center justify-center p-1.5 md:p-2 rounded-full hover:bg-primary/10 transition-colors">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4 md:size-5 text-primary">
+                                                    <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-8 12.5v-9l6 4.5-6 4.5z" />
+                                                </svg>
+                                            </button>
+                                        </div>
+                                        <button onclick="addPost()" class="min-w-[60px] md:min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-8 md:h-10 px-3 md:px-5 bg-primary text-white text-xs md:text-sm font-bold leading-normal shadow-sm hover:bg-primary/90 transition-colors">
+                                            <span class="truncate">Post</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="feed" class="flex flex-col divide-y divide-border-light dark:divide-slate-800"></div>
+                    </main>
+
+                    <aside class="hidden lg:block sticky top-0 w-[280px] xl:w-[320px] p-4 h-screen overflow-y-auto">
+                        <div class="flex flex-col gap-6">
+                            <div class="rounded-xl border border-border-light dark:border-slate-800 bg-white dark:bg-slate-900 shadow-sm overflow-hidden">
+                                <h3 class="p-3 xl:p-4 text-sm xl:text-base font-bold text-text-primary-light dark:text-text-primary-dark border-b border-border-light dark:border-slate-800">
+                                    Who to Follow
+                                </h3>
+                                <div id="followList" class="flex flex-col"></div>
+                                <div class="p-3 xl:p-4 border-t border-border-light dark:border-slate-800">
+                                    <a href="#/people" class="text-sm text-primary hover:text-primary/80 font-medium transition-colors">
+                                        Show more
+                                    </a>
+                                </div>
+                                
+                            </div>
+
+                            <div class="rounded-xl border border-border-light dark:border-slate-800 bg-white dark:bg-slate-900 shadow-sm p-4">
+                                <h3 class="text-sm xl:text-base font-bold text-text-primary-light dark:text-text-primary-dark mb-3">
+                                    Trending Topics
+                                </h3>
+                                <div class="flex flex-col gap-3">
+                                    <div class="hover:bg-gray-50/50 dark:hover:bg-slate-800/50 p-2 rounded-lg transition-colors cursor-pointer">
+                                        <p class="text-xs text-text-secondary-light dark:text-slate-400">Trending in Tech</p>
+                                        <p class="text-sm font-semibold text-text-primary-light dark:text-text-primary-dark">#WebDevelopment</p>
+                                        <p class="text-xs text-text-secondary-light dark:text-slate-400">12.5K posts</p>
+                                    </div>
+                                    <div class="hover:bg-gray-50/50 dark:hover:bg-slate-800/50 p-2 rounded-lg transition-colors cursor-pointer">
+                                        <p class="text-xs text-text-secondary-light dark:text-slate-400">Trending Worldwide</p>
+                                        <p class="text-sm font-semibold text-text-primary-light dark:text-text-primary-dark">#Design</p>
+                                        <p class="text-xs text-text-secondary-light dark:text-slate-400">8.3K posts</p>
+                                    </div>
+                                    <div class="hover:bg-gray-50/50 dark:hover:bg-slate-800/50 p-2 rounded-lg transition-colors cursor-pointer">
+                                        <p class="text-xs text-text-secondary-light dark:text-slate-400">Trending in Art</p>
+                                        <p class="text-sm font-semibold text-text-primary-light dark:text-text-primary-dark">#Photography</p>
+                                        <p class="text-xs text-text-secondary-light dark:text-slate-400">5.7K posts</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="mobile-nav-container"></div>
+    <script type="module" src="../js/home.js"></script>
+</body>
+</html>

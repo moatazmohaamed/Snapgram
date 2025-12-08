@@ -1,7 +1,5 @@
 <!DOCTYPE html>
-
 <html class="" lang="en">
-
 <head>
   <meta charset="utf-8" />
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
@@ -9,13 +7,11 @@
   <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
   <link href="https://fonts.googleapis.com" rel="preconnect" />
   <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap"
-    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
   <link rel="shortcut icon" href="/client/assets/icons/favicon.png" type="image/x-icon">
   <script src="/client/config/tailwind.config.js"></script>
 </head>
-
 <body class="bg-background-light dark:bg-background-dark font-display">
   <div class="flex h-screen w-full">
 
@@ -33,7 +29,7 @@
           <h2 class="text-2xl font-bold text-gray-900 dark:text-white">Create a new account</h2>
           <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">Please enter your account details</p>
         </div>
-        <form class="mt-8 space-y-4 ">
+        <form class="mt-8 space-y-4 " id="register-form">
           <div>
             <label class="block text-sm font-medium text-gray-700 dark:text-gray-300" for="name">Name</label>
             <input
@@ -62,7 +58,7 @@
           <div>
             <div class="flex items-center justify-between">
               <label class="block text-sm font-medium text-gray-700 dark:text-gray-300" for="password">Password</label>
-              <a class="text-sm font-medium text-primary hover:text-indigo-500" href="#">Forgot
+              <a class="text-sm font-medium text-primary hover:text-indigo-500" href="#/forgot-password">Forgot
                 password?</a>
             </div>
             <div class="mt-1 relative">
@@ -95,23 +91,14 @@
 
         <p class="mt-8 text-center text-sm text-gray-600 dark:text-gray-400">
           Already have an account?
-          <a class="font-medium text-primary hover:underline" onclick="router(event)" href="#/sign-in">Sign
-            in</a>
+          <a class="font-medium text-primary hover:underline" onclick="router(event)" href="#/sign-in">Sign in</a>
         </p>
       </div>
-
     </div>
-
-
     <div class="hidden w-1/2 lg:block">
-      <img alt="A collage of various lifestyle and nature photos displayed in a grid."
-        class="h-full w-full object-cover" src="../assets/images/side-light.jpg" />
+      <img alt="A collage of various lifestyle and nature photos displayed in a grid." class="h-full w-full object-cover" src="../assets/images/side-light.jpg" />
     </div>
-
-
   </div>
-
-  <script src="../js/router.js"></script>
+  <script type="module" src="../js/sign-up.js"></script>
 </body>
-
 </html>

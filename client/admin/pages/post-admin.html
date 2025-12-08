@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Manage Posts</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 font-sans">
+
+  <div class="max-w-7xl mx-auto p-8">
+
+    <h1 class="text-3xl font-bold mb-6 text-gray-900">Manage Posts</h1>
+    <p class="mb-6 text-gray-600">View, edit, and manage all user-generated posts.</p>
+    <div class="flex flex-wrap items-center gap-4 mb-6">
+      <input
+        type="text"
+        placeholder="Search by content, user, or ID..."
+        class="flex-grow min-w-[240px] border border-gray-300 rounded-lg px-4 py-2 text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+      />
+      <select class="border border-gray-300 rounded-lg px-4 py-2 text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+        <option>All Statuses</option>
+        <option>Published</option>
+        <option>Draft</option>
+        <option>Flagged</option>
+      </select>
+      <select class="border border-gray-300 rounded-lg px-4 py-2 text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+        <option>All Types</option>
+        <option>Image</option>
+        <option>Text</option>
+        <option>Video</option>
+      </select>
+      <button
+        class="ml-auto bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-lg shadow-md transition"
+      >
+        + Create New Post
+      </button>
+    </div>
+
+    <div class="overflow-x-auto bg-white rounded-lg shadow border border-gray-200">
+      <table class="min-w-full divide-y divide-gray-200">
+        <thead class="bg-gray-100">
+          <tr>
+            <th class="w-8 p-4"><input type="checkbox" class="form-checkbox" /></th>
+            <th class="text-left text-xs font-semibold text-gray-500 uppercase tracking-wider px-4 py-3">
+              Post Preview
+            </th>
+            <th class="text-left text-xs font-semibold text-gray-500 uppercase tracking-wider px-4 py-3">
+              Author
+            </th>
+            <th class="text-center text-xs font-semibold text-gray-500 uppercase tracking-wider px-4 py-3">
+              Likes
+            </th>
+            <th class="text-center text-xs font-semibold text-gray-500 uppercase tracking-wider px-4 py-3">
+              Comments
+            </th>
+            <th class="text-center text-xs font-semibold text-gray-500 uppercase tracking-wider px-4 py-3">
+              Status
+            </th>
+            <th class="text-center text-xs font-semibold text-gray-500 uppercase tracking-wider px-4 py-3">
+              Date Created
+            </th>
+            <th class="text-center text-xs font-semibold text-gray-500 uppercase tracking-wider px-4 py-3">
+              Actions
+            </th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-200 text-gray-700">
+          <tr class="hover:bg-gray-50 cursor-pointer">
+            <td class="p-4"><input type="checkbox" class="form-checkbox" /></td>
+            <td class="flex items-center px-4 py-3 gap-3 max-w-[280px] truncate">
+              <img
+                src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=80&q=80"
+                alt="Post Image"
+                class="w-12 h-8 rounded-md object-cover flex-shrink-0"
+              />
+              <span class="truncate">Exploring the serene landscapes of the mountains...</span>
+            </td>
+            <td class="flex items-center gap-2 px-4 py-3 whitespace-nowrap">
+              <img
+                src="https://randomuser.me/api/portraits/women/65.jpg"
+                alt="Author"
+                class="w-8 h-8 rounded-full object-cover"
+              />
+              Olivia Rhye
+            </td>
+            <td class="text-center px-4 py-3 whitespace-nowrap">1.2K</td>
+            <td class="text-center px-4 py-3 whitespace-nowrap">48</td>
+            <td class="text-center px-4 py-3 whitespace-nowrap">
+              <span class="bg-green-100 text-green-700 text-xs font-semibold px-2 py-1 rounded-full">
+                Published
+              </span>
+            </td>
+            <td class="text-center px-4 py-3 whitespace-nowrap">Oct 26, 2023</td>
+            <td class="text-center px-4 py-3 whitespace-nowrap space-x-2">
+              <button
+                title="View"
+                class="text-gray-500 hover:text-gray-700"
+                aria-label="View Post"
+              >
+                👁️
+              </button>
+              <button
+                title="Edit"
+                class="text-gray-500 hover:text-gray-700"
+                aria-label="Edit Post"
+              >
+                ✏️
+              </button>
+              <button
+                title="Delete"
+                class="text-gray-500 hover:text-gray-700"
+                aria-label="Delete Post"
+              >
+                🗑️
+              </button>
+            </td>
+          </tr>
+          <tr class="hover:bg-gray-50 cursor-pointer">
+            <td class="p-4"><input type="checkbox" class="form-checkbox" /></td>
+            <td class="flex items-center px-4 py-3 gap-3 max-w-[280px] truncate">
+              <div
+                class="w-12 h-8 flex items-center justify-center bg-gray-200 rounded-md text-gray-500 flex-shrink-0"
+              >
+                📝
+              </div>
+              <span class="truncate">Just a quick thought about the future of AI in development...</span>
+            </td>
+            <td class="flex items-center gap-2 px-4 py-3 whitespace-nowrap">
+              <img
+                src="https://randomuser.me/api/portraits/men/32.jpg"
+                alt="Author"
+                class="w-8 h-8 rounded-full object-cover"
+              />
+              Phoenix Baker
+            </td>
+            <td class="text-center px-4 py-3 whitespace-nowrap">345</td>
+            <td class="text-center px-4 py-3 whitespace-nowrap">12</td>
+            <td class="text-center px-4 py-3 whitespace-nowrap">
+              <span class="bg-yellow-100 text-yellow-700 text-xs font-semibold px-2 py-1 rounded-full">
+                Flagged
+              </span>
+            </td>
+            <td class="text-center px-4 py-3 whitespace-nowrap">Oct 25, 2023</td>
+            <td class="text-center px-4 py-3 whitespace-nowrap space-x-2">
+              <button
+                title="View"
+                class="text-gray-500 hover:text-gray-700"
+                aria-label="View Post"
+              >
+                👁️
+              </button>
+              <button
+                title="Edit"
+                class="text-gray-500 hover:text-gray-700"
+                aria-label="Edit Post"
+              >
+                ✏️
+              </button>
+              <button
+                title="Delete"
+                class="text-gray-500 hover:text-gray-700"
+                aria-label="Delete Post"
+              >
+                🗑️
+              </button>
+            </td>
+          </tr>
+          <tr class="hover:bg-gray-50 cursor-pointer">
+            <td class="p-4"><input type="checkbox" class="form-checkbox" /></td>
+            <td class="flex items-center px-4 py-3 gap-3 max-w-[280px] truncate">
+              <img
+                src="https://images.unsplash.com/photo-1519183071298-a2962ccf9a2a?auto=format&fit=crop&w=80&q=80"
+                alt="Post Image"
+                class="w-12 h-8 rounded-md object-cover flex-shrink-0"
+              />
+              <span class="truncate">Vintage vibes today. Found this old camera at a thrift store...</span>
+            </td>
+            <td class="flex items-center gap-2 px-4 py-3 whitespace-nowrap">
+              <img
+                src="https://randomuser.me/api/portraits/women/44.jpg"
+                alt="Author"
+                class="w-8 h-8 rounded-full object-cover"
+              />
+              Lana Steiner
+            </td>
+            <td class="text-center px-4 py-3 whitespace-nowrap">890</td>
+            <td class="text-center px-4 py-3 whitespace-nowrap">150</td>
+            <td class="text-center px-4 py-3 whitespace-nowrap">
+              <span class="bg-green-100 text-green-700 text-xs font-semibold px-2 py-1 rounded-full">
+                Published
+              </span>
+            </td>
+            <td class="text-center px-4 py-3 whitespace-nowrap">Oct 24, 2023</td>
+            <td class="text-center px-4 py-3 whitespace-nowrap space-x-2">
+              <button
+                title="View"
+                class="text-gray-500 hover:text-gray-700"
+                aria-label="View Post"
+              >
+                👁️
+              </button>
+              <button
+                title="Edit"
+                class="text-gray-500 hover:text-gray-700"
+                aria-label="Edit Post"
+              >
+                ✏️
+              </button>
+              <button
+                title="Delete"
+                class="text-gray-500 hover:text-gray-700"
+                aria-label="Delete Post"
+              >
+                🗑️
+              </button>
+            </td>
+          </tr>
+          <tr class="hover:bg-gray-50 cursor-pointer">
+            <td class="p-4"><input type="checkbox" class="form-checkbox" /></td>
+            <td class="flex items-center px-4 py-3 gap-3 max-w-[280px] truncate">
+              <img
+                src="https://randomuser.me/api/portraits/men/17.jpg"
+                alt="Author"
+                class="w-12 h-8 rounded-md object-cover flex-shrink-0 rounded-full"
+              />
+              <span class="truncate">My dog is cooler than your dog. Just saying. #dogs...</span>
+            </td>
+            <td class="flex items-center gap-2 px-4 py-3 whitespace-nowrap">
+              <img
+                src="https://randomuser.me/api/portraits/men/17.jpg"
+                alt="Author"
+                class="w-8 h-8 rounded-full object-cover"
+              />
+              Drew Cano
+            </td>
+            <td class="text-center px-4 py-3 whitespace-nowrap">2.5K</td>
+            <td class="text-center px-4 py-3 whitespace-nowrap">312</td>
+            <td class="text-center px-4 py-3 whitespace-nowrap">
+              <span class="bg-gray-200 text-gray-700 text-xs font-semibold px-2 py-1 rounded-full">
+                Draft
+              </span>
+            </td>
+            <td class="text-center px-4 py-3 whitespace-nowrap">Oct 23, 2023</td>
+            <td class="text-center px-4 py-3 whitespace-nowrap space-x-2">
+              <button
+                title="View"
+                class="text-gray-500 hover:text-gray-700"
+                aria-label="View Post"
+              >
+                👁️
+              </button>
+              <button
+                title="Edit"
+                class="text-gray-500 hover:text-gray-700"
+                aria-label="Edit Post"
+              >
+                ✏️
+              </button>
+              <button
+                title="Delete"
+                class="text-gray-500 hover:text-gray-700"
+                aria-label="Delete Post"
+              >
+                🗑️
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="mt-6 flex justify-end items-center space-x-3 text-gray-600 text-sm">
+      <button
+        disabled
+        class="px-3 py-1 rounded-md border border-gray-300 text-gray-400 cursor-not-allowed"
+      >
+        Previous
+      </button>
+      <button class="px-3 py-1 rounded-md border border-blue-500 text-blue-600 font-semibold">
+        1
+      </button>
+      <button class="px-3 py-1 rounded-md border border-gray-300 hover:border-gray-400">
+        2
+      </button>
+      <button class="px-3 py-1 rounded-md border border-gray-300 hover:border-gray-400">
+        3
+      </button>
+      <button class="px-3 py-1 rounded-md border border-gray-300 hover:border-gray-400">
+        Next
+      </button>
+    </div>
+
+  </div>
+
+</body>
+</html>

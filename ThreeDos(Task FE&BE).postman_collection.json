@@ -1,0 +1,210 @@
+{
+	"info": {
+		"_postman_id": "e1173323-1b5d-4f10-bbae-4400cf0cdbba",
+		"name": "ThreeDos(Task FE&BE)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "44157874"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "   {\r\n        \"email\": \"farahyasser04@gmail.com\",\r\n    \"password\": \"Aa.1234\"\r\n   } ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/THreeDos'26/Task%20BE&FE/snapgram/snapgram/auth/login.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"THreeDos'26",
+						"Task%20BE&FE",
+						"snapgram",
+						"snapgram",
+						"auth",
+						"login.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Change Password",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJsb2NhbGhvc3QiLCJpYXQiOjE3NjQ4MTQ3MjYsImV4cCI6MTc2NTQxOTUyNiwiZGF0YSI6eyJ1c2VyX2lkIjo1LCJyb2xlX2lkIjowfX0.T-DKyflvS5OjK4gFMQ9-MAlOwvXkNhSnzr59lF22tWQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"oldPassword\": \"Aa.1234\",\r\n      \"newPassword\": \"Aa.12345\",\r\n       \"confirmPassword\": \"Aa.12345\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/THreeDos'26/Task%20BE&FE/snapgram/snapgram/auth/ChangePassword.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"THreeDos'26",
+						"Task%20BE&FE",
+						"snapgram",
+						"snapgram",
+						"auth",
+						"ChangePassword.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AccessToken",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/THreeDos'26/Task%20BE&FE/snapgram/snapgram/auth/AccessToken.php/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJsb2NhbGhvc3QiLCJpYXQiOjE3NjQ4MTQ3MjYsImV4cCI6MTc2NTQxOTUyNiwiZGF0YSI6eyJ1c2VyX2lkIjo1LCJyb2xlX2lkIjowfX0.T-DKyflvS5OjK4gFMQ9-MAlOwvXkNhSnzr59lF22tWQ",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"THreeDos'26",
+						"Task%20BE&FE",
+						"snapgram",
+						"snapgram",
+						"auth",
+						"AccessToken.php",
+						"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJsb2NhbGhvc3QiLCJpYXQiOjE3NjQ4MTQ3MjYsImV4cCI6MTc2NTQxOTUyNiwiZGF0YSI6eyJ1c2VyX2lkIjo1LCJyb2xlX2lkIjowfX0.T-DKyflvS5OjK4gFMQ9-MAlOwvXkNhSnzr59lF22tWQ"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "logout",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJsb2NhbGhvc3QiLCJpYXQiOjE3NjQ4MTY0MzQsImV4cCI6MTc2NTQyMTIzNCwiZGF0YSI6eyJ1c2VyX2lkIjo1LCJyb2xlX2lkIjowfX0.48isGzN3VHpSjAms2103vMZY_M8Ca3TzsQyTJ5CuGSA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/THreeDos'26/Task%20BE&FE/snapgram/snapgram/auth/logout.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"THreeDos'26",
+						"Task%20BE&FE",
+						"snapgram",
+						"snapgram",
+						"auth",
+						"logout.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Send Code",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/THreeDos'26/Task%20BE&FE/snapgram/snapgram/auth/reset_password.php?email=minamagdylatif5@gmail.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"THreeDos'26",
+						"Task%20BE&FE",
+						"snapgram",
+						"snapgram",
+						"auth",
+						"reset_password.php"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "minamagdylatif5@gmail.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Check Code",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "ChangeAfterCheck",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"email\":\"minamagdylatif5@gmail.com\",\r\n          \"Password\": \"Aa.12345\",\r\n       \"confirmPassword\": \"Aa.12345\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/THreeDos'26/Task%20BE&FE/snapgram/snapgram/auth/reset_password.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"THreeDos'26",
+						"Task%20BE&FE",
+						"snapgram",
+						"snapgram",
+						"auth",
+						"reset_password.php"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

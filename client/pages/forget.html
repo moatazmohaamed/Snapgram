@@ -7,12 +7,13 @@
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap"rel="stylesheet" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
     <link rel="shortcut icon" href="/client/assets/icons/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="/client/css/main.css">
     <script src="/client/config/tailwind.config.js"></script>
 </head>
+
 <body class="font-display bg-background-light dark:bg-background-dark text-gray-800 dark:text-gray-200 antialiased">
     <div class="flex h-screen w-full">
         <div
@@ -33,7 +34,7 @@
                     <p class="mt-2 text-sm text-gray-500 dark:text-gray-400">Welcome back, please enter your account
                         details</p>
                 </div>
-                <form id="login-form" action="#" class="space-y-6" method="POST">
+                <form action="#" class="space-y-6" method="POST">
                     <div>
                         <label class="block text-sm font-medium text-gray-700 dark:text-gray-300"
                             for="email">Email</label>
@@ -43,45 +44,17 @@
                                 id="email" name="email" required="" type="email" />
                         </div>
                     </div>
-
-                    <div>
-                        <div class="flex items-center justify-between">
-                            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300"
-                                for="password">Password</label>
-                            <a class="text-sm font-medium text-primary hover:text-indigo-500"
-                                href="#/forgot-password">Forgot
-                                password?</a>
-                        </div>
-                        <div class="mt-1 relative">
-                            <input autocomplete="current-password"
-                                class="block w-full appearance-none rounded-md border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 px-3 py-2 text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 focus:border-primary focus:outline-none focus:ring-primary sm:text-sm"
-                                id="password" name="password" required="" type="password" />
-                            <button
-                                class="absolute inset-y-0 right-0 flex items-center pr-3 text-gray-400 hover:text-gray-600 dark:hover:text-gray-200"
-                                type="button">
-                                <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z">
-                                    </path>
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
-
                     <div>
                         <button
-                            class="flex w-full justify-center rounded-md border border-transparent bg-primary py-2 px-4 text-sm font-semibold text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 dark:focus:ring-offset-background-dark"
+                            class="flex w-full justify-center rounded-md border border-transparent bg-indigo-700 py-2 px-4 text-sm font-semibold text-white shadow-sm hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 dark:focus:ring-offset-background-dark"
                             type="submit">
-                            Sign in
+                            Send reset link
                         </button>
                     </div>
                 </form>
                 <p class="text-center text-sm text-gray-500 dark:text-gray-400">
-                    Don't have an account?
-                    <a class="font-semibold leading-6 text-primary hover:text-indigo-500" href="#/sign-up" onclick="router(event)">Sign up</a>
+                    Back to Login
+                    <a class="font-semibold leading-6 text-primary hover:text-indigo-500" href="#/sign-in" onclick="router(event)">Sign in</a>
                 </p>
             </div>
         </div>
@@ -89,6 +62,5 @@
             <img alt="A collage of various lifestyle and nature photographs." class="h-full w-full object-cover" src="../assets/images/side-img.svg" />
         </div>
     </div>
-    <script type="module" src="../js/sign-in.js"></script>
 </body>
 </html>
