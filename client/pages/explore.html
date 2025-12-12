@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Explore - Snapgram</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
+    <link rel="shortcut icon" href="/client/assets/icons/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/client/css/main.css">
+    <link rel="stylesheet" href="/client/css/navigation.css">
+    <script src="/client/config/tailwind.config.js"></script>
+</head>
+<body class="bg-background-light font-display dark:bg-background-dark">
+    <div class="relative min-h-screen w-full overflow-x-hidden pb-20 md:pb-0">
+        <div class="flex h-full flex-col">
+            <div class="flex justify-center">
+                <div class="flex w-full max-w-7xl justify-center">
+                    <div id="sidebar-container"></div>
+
+                    <main class="w-full md:max-w-4xl border-x-0 md:border-x border-border-light dark:border-slate-800">
+                        <div class="sticky top-0 z-10 border-b border-border-light dark:border-slate-800 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md px-3 md:px-4 py-3">
+                            <h2 class="text-base md:text-lg font-bold text-text-primary-light dark:text-text-primary-dark">Explore</h2>
+                        </div>
+
+                        <div class="p-3 md:p-4">
+                            <div class="flex flex-col gap-2 mb-4 md:mb-6">
+                                <p class="text-slate-500 text-sm md:text-base font-normal leading-normal dark:text-slate-400">
+                                    Discover trending posts and new content
+                                </p>
+                            </div>
+
+                            <div class="mb-4 md:mb-6">
+                                <div class="relative">
+                                    <div class="absolute inset-y-0 left-0 flex items-center pl-3 md:pl-4 pointer-events-none">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4 md:size-5 text-slate-400 dark:text-slate-500">
+                                            <path d="M0 0h24v24H0V0z" fill="none" />
+                                            <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" />
+                                        </svg>
+                                    </div>
+                                    <input type="text" id="search-input" class="w-full h-10 md:h-12 pl-9 md:pl-11 pr-3 md:pr-4 text-sm md:text-base bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-lg text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-transparent" placeholder="Search posts..." />
+                                </div>
+                            </div>
+
+                            <div class="mb-6">
+                                <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-4">Trending Topics</h3>
+                                <div class="flex flex-wrap gap-2" id="trending-topics">
+                                    <!-- Trending topics will be loaded here -->
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6" id="posts-grid">
+                                <!-- Posts will be loaded here -->
+                            </div>
+
+                            <div class="flex justify-center mt-8" id="load-more-container">
+                                <button id="load-more-btn" class="px-6 py-3 bg-primary text-white rounded-xl font-semibold hover:bg-primary/90 transition-colors">
+                                    Load More
+                                </button>
+                            </div>
+                        </div>
+                    </main>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="mobile-nav-container"></div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="../utils/componentLoader.js"></script>
+    <script type="module" src="../js/explore.js"></script>
+</body>
+</html>

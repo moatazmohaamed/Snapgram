@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Test</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <h1>API Test</h1>
+    <button onclick="testPosts()">Test Posts API</button>
+    <button onclick="testProfiles()">Test Profiles API</button>
+    <div id="results"></div>
+
+    <script>
+        const API_URL = 'https://7e45f5cc-358b-4334-9ad4-a06b6954fe9f.mock.pstmn.io';
+        
+        async function testPosts() {
+            try {
+                console.log('Testing posts API...');
+                const response = await axios.get(`${API_URL}/api/posts`);
+                console.log('Posts response:', response.data);
+                document.getElementById('results').innerHTML = '<h3>Posts API Success!</h3><pre>' + JSON.stringify(response.data, null, 2) + '</pre>';
+            } catch (error) {
+                console.error('Posts API error:', error);
+                document.getElementById('results').innerHTML = '<h3>Posts API Error!</h3><pre>' + error.message + '</pre>';
+            }
+        }
+        
+        async function testProfiles() {
+            try {
+                console.log('Testing profiles API...');
+                const response = await axios.get(`${API_URL}/api/profile`);
+                console.log('Profiles response:', response.data);
+                document.getElementById('results').innerHTML = '<h3>Profiles API Success!</h3><pre>' + JSON.stringify(response.data, null, 2) + '</pre>';
+            } catch (error) {
+                console.error('Profiles API error:', error);
+                document.getElementById('results').innerHTML = '<h3>Profiles API Error!</h3><pre>' + error.message + '</pre>';
+            }
+        }
+    </script>
+</body>
+</html>

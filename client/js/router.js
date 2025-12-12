@@ -46,6 +46,10 @@ const routes = {
         path: '../pages/people.html',
         title: 'People'
     },
+    '/explore': {
+        path: '../pages/explore.html',
+        title: 'Explore'
+    },
     '/forgot-password': {
         path: '../pages/forget.html',
         title: 'Forgot Password'
@@ -112,6 +116,22 @@ const handleLocation = async () => {
         const dashSidebarContainer = document.querySelector('#dash-sidebar');
         if (dashSidebarContainer && window.componentLoader) {
             await window.componentLoader.insert('../admin/components/dash-sidebar.html', dashSidebarContainer);
+        }
+
+        // Check authentication for protected routes
+        const protectedRoutes = ['/home', '/feed', '/saved', '/people', '/user-profile', '/settings', '/explore'];
+        const guestOnlyRoutes = ['/sign-in', '/sign-up', '/forgot-password', '/verify'];
+        
+        const isAuthenticated = localStorage.getItem('isAuthenticated') === 'true';
+        
+        if (protectedRoutes.includes(path) && !isAuthenticated) {
+            window.location.hash = '/sign-in';
+            return;
+        }
+        
+        if (guestOnlyRoutes.includes(path) && isAuthenticated) {
+            window.location.hash = '/home';
+            return;
         }
 
         setTimeout(() => {

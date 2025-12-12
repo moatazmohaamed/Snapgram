@@ -38,14 +38,12 @@
                                                     alt="User avatar">
                                             </div>
                                             <div class="flex flex-col justify-center">
-                                                <p class="text-slate-900 dark:text-white text-xl md:text-2xl font-bold">
+                                                <p id="profile-name" class="text-slate-900 dark:text-white text-xl md:text-2xl font-bold">
                                                     Motzzzzzzz</p>
-                                                <p class="text-slate-500 dark:text-slate-400 text-sm md:text-base">
+                                                <p id="profile-username" class="text-slate-500 dark:text-slate-400 text-sm md:text-base">
                                                     @motzzzzzzz</p>
-                                                <p class="text-slate-600 dark:text-slate-300 text-sm md:text-base mt-2">
-                                                    Digital creator and coffee enthusiast. Exploring the world one cup
-                                                    at a
-                                                    time.</p>
+                                                <p id="profile-bio" class="text-slate-600 dark:text-slate-300 text-sm md:text-base mt-2">
+                                                    Digital creator and coffee enthusiast. Exploring the world one cup at a time.</p>
                                             </div>
                                         </div>
                                         <button
@@ -55,24 +53,21 @@
                                     </div>
 
                                     <div class="grid grid-cols-3 gap-3 md:gap-4">
-                                        <div
-                                            class="flex flex-col gap-1 rounded-lg border border-slate-200 dark:border-slate-700 p-3 md:p-4 items-center text-center">
-                                            <p class="text-slate-900 dark:text-white text-lg md:text-2xl font-bold">
+                                        <div class="flex flex-col gap-1 rounded-lg border border-slate-200 dark:border-slate-700 p-3 md:p-4 items-center text-center">
+                                            <p id="followers-count" class="text-slate-900 dark:text-white text-lg md:text-2xl font-bold">
                                                 1,204
                                             </p>
-                                            <p class="text-slate-500 dark:text-slate-400 text-xs md:text-sm">Followers
-                                            </p>
+                                            <p class="text-slate-500 dark:text-slate-400 text-xs md:text-sm">Followers</p>
                                         </div>
-                                        <div
-                                            class="flex flex-col gap-1 rounded-lg border border-slate-200 dark:border-slate-700 p-3 md:p-4 items-center text-center">
-                                            <p class="text-slate-900 dark:text-white text-lg md:text-2xl font-bold">560
+                                        <div class="flex flex-col gap-1 rounded-lg border border-slate-200 dark:border-slate-700 p-3 md:p-4 items-center text-center">
+                                            <p id="following-count" class="text-slate-900 dark:text-white text-lg md:text-2xl font-bold">
+                                                560
                                             </p>
-                                            <p class="text-slate-500 dark:text-slate-400 text-xs md:text-sm">Following
-                                            </p>
+                                            <p class="text-slate-500 dark:text-slate-400 text-xs md:text-sm">Following</p>
                                         </div>
-                                        <div
-                                            class="flex flex-col gap-1 rounded-lg border border-slate-200 dark:border-slate-700 p-3 md:p-4 items-center text-center">
-                                            <p class="text-slate-900 dark:text-white text-lg md:text-2xl font-bold">88
+                                        <div class="flex flex-col gap-1 rounded-lg border border-slate-200 dark:border-slate-700 p-3 md:p-4 items-center text-center">
+                                            <p id="posts-count" class="text-slate-900 dark:text-white text-lg md:text-2xl font-bold">
+                                                88
                                             </p>
                                             <p class="text-slate-500 dark:text-slate-400 text-xs md:text-sm">Posts</p>
                                         </div>
@@ -85,83 +80,97 @@
                                 Posts
                             </h3>
 
-                            <div class="flex flex-col  gap-4 md:gap-6 ">
-
-                                <article
-                                    class="bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-slate-100 dark:border-slate-800 overflow-hidden  justify-center ">
+                            <div class="flex flex-col gap-4 md:gap-6">
+                                <!-- Post 1 -->
+                                <article class="bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-slate-100 dark:border-slate-800 overflow-hidden">
                                     <div class="p-3 md:p-5">
-                                        <div class="flex items-center  gap-2 md:gap-3 mb-3 md:mb-4">
+                                        <div class="flex items-center gap-2 md:gap-3 mb-3 md:mb-4">
                                             <div>
-                                                <img src="/client/assets/images/avatar.png"
-                                                    class="rounded-full size-8 md:size-10" alt="avatar">
+                                                <img src="/client/assets/images/avatar.png" class="rounded-full size-8 md:size-10" alt="avatar">
                                             </div>
                                             <div>
-                                                <p
-                                                    class="text-slate-900 dark:text-white text-sm md:text-base font-semibold">
-                                                    Motzzzzzzz</p>
-                                                <p class="text-slate-500 dark:text-slate-400 text-xs md:text-sm">2 hours
-                                                    ago
-                                                </p>
+                                                <p class="text-slate-900 dark:text-white text-sm md:text-base font-semibold">Motzzzzzzz</p>
+                                                <p class="text-slate-500 dark:text-slate-400 text-xs md:text-sm">2 hours ago</p>
                                             </div>
                                         </div>
                                         <p class="text-slate-700 dark:text-slate-300 text-sm md:text-base mb-3 md:mb-4">
-                                            Spent the entire afternoon soaking up the sun and enjoying the waves.
-                                            Couldn't
-                                            have asked for a better day. Feeling so refreshed and grateful. #beachday
-                                            #ocean
-                                            #sunset
+                                            Spent the entire afternoon soaking up the sun and enjoying the waves. Couldn't have asked for a better day. 
+                                            Feeling so refreshed and grateful. #beachday #ocean #sunset
                                         </p>
                                     </div>
                                     <div>
-                                        <img src="/client/assets/images/mock-home.jpg" class="aspect-video w-full"
-                                            alt="mock-home">
+                                        <img src="/client/assets/images/mock-home.jpg" class="aspect-video w-full" alt="Beach sunset">
                                     </div>
                                     <div class="p-2 md:p-3 border-t border-slate-100 dark:border-slate-700">
                                         <div class="flex items-center justify-start gap-2 md:gap-4 -ml-1 md:-ml-2">
-                                            <div
-                                                class="flex items-center justify-center gap-1 md:gap-1.5 px-1.5 md:px-2 py-1 md:py-1.5 rounded-full hover:bg-red-50 group cursor-pointer">
-                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                                                    fill="currentColor"
-                                                    class="size-4 md:size-5 text-slate-500 group-hover:text-red-500 dark:text-slate-400">
+                                            <button class="flex items-center justify-center gap-1 md:gap-1.5 px-1.5 md:px-2 py-1 md:py-1.5 rounded-full hover:bg-red-50 group cursor-pointer">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4 md:size-5 text-slate-500 group-hover:text-red-500 dark:text-slate-400">
                                                     <path d="M0 0h24v24H0V0z" fill="none" />
-                                                    <path
-                                                        d="m12 21.35-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3c3.08 0 5.5 2.42 5.5 5.5 0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                                                    <path d="m12 21.35-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3c3.08 0 5.5 2.42 5.5 5.5 0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
                                                 </svg>
-                                                <p
-                                                    class="text-xs md:text-sm font-medium leading-normal text-slate-500 group-hover:text-red-500 dark:text-slate-400">
-                                                    Like</p>
-                                            </div>
-                                            <div
-                                                class="flex items-center justify-center gap-1 md:gap-1.5 px-1.5 md:px-2 py-1 md:py-1.5 rounded-full hover:bg-blue-50 group cursor-pointer">
-                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                                                    fill="currentColor"
-                                                    class="size-4 md:size-5 text-slate-500 group-hover:text-blue-500 dark:text-slate-400">
+                                                <p class="text-xs md:text-sm font-medium leading-normal text-slate-500 group-hover:text-red-500 dark:text-slate-400">324</p>
+                                            </button>
+                                            <button class="flex items-center justify-center gap-1 md:gap-1.5 px-1.5 md:px-2 py-1 md:py-1.5 rounded-full hover:bg-blue-50 group cursor-pointer">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4 md:size-5 text-slate-500 group-hover:text-blue-500 dark:text-slate-400">
                                                     <path d="M0 0h24v24H0V0z" fill="none" />
-                                                    <path
-                                                        d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z" />
+                                                    <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z" />
                                                 </svg>
-                                                <p
-                                                    class="text-xs md:text-sm font-medium leading-normal text-slate-500 group-hover:text-blue-500 dark:text-slate-400">
-                                                    Comment</p>
-                                            </div>
-                                            <div
-                                                class="flex items-center justify-center gap-1 md:gap-1.5 px-1.5 md:px-2 py-1 md:py-1.5 rounded-full hover:bg-green-50 group cursor-pointer">
-                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                                                    fill="currentColor"
-                                                    class="size-4 md:size-5 text-slate-500 group-hover:text-green-500 dark:text-slate-400">
+                                                <p class="text-xs md:text-sm font-medium leading-normal text-slate-500 group-hover:text-blue-500 dark:text-slate-400">67</p>
+                                            </button>
+                                            <button class="flex items-center justify-center gap-1 md:gap-1.5 px-1.5 md:px-2 py-1 md:py-1.5 rounded-full hover:bg-green-50 group cursor-pointer">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4 md:size-5 text-slate-500 group-hover:text-green-500 dark:text-slate-400">
                                                     <path d="M0 0h24v24H0V0z" fill="none" />
-                                                    <path
-                                                        d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.51.48 1.2.77 1.96.77 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L7.05 11.9c-.51-.48-1.2-.77-1.96-.77-1.66 0-3 1.34-3 3s1.34 3 3 3c.76 0 1.44-.3 1.96-.77l7.05 4.11c-.05.23-.09.46-.09.7 0 1.66 1.34 3 3 3s3-1.34 3-3-1.34-3-3-3z" />
+                                                    <path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.51.48 1.2.77 1.96.77 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L7.05 11.9c-.51-.48-1.2-.77-1.96-.77-1.66 0-3 1.34-3 3s1.34 3 3 3c.76 0 1.44-.3 1.96-.77l7.05 4.11c-.05.23-.09.46-.09.7 0 1.66 1.34 3 3 3s3-1.34 3-3-1.34-3-3-3z" />
                                                 </svg>
-                                                <p
-                                                    class="text-xs md:text-sm font-medium leading-normal text-slate-500 group-hover:text-green-500 dark:text-slate-400">
-                                                    Share</p>
-                                            </div>
+                                                <p class="text-xs md:text-sm font-medium leading-normal text-slate-500 group-hover:text-green-500 dark:text-slate-400">45</p>
+                                            </button>
                                         </div>
                                     </div>
                                 </article>
 
-
+                                <!-- Post 2 -->
+                                <article class="bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-slate-100 dark:border-slate-800 overflow-hidden">
+                                    <div class="p-3 md:p-5">
+                                        <div class="flex items-center gap-2 md:gap-3 mb-3 md:mb-4">
+                                            <div>
+                                                <img src="/client/assets/images/avatar.png" class="rounded-full size-8 md:size-10" alt="avatar">
+                                            </div>
+                                            <div>
+                                                <p class="text-slate-900 dark:text-white text-sm md:text-base font-semibold">Motzzzzzzz</p>
+                                                <p class="text-slate-500 dark:text-slate-400 text-xs md:text-sm">1 day ago</p>
+                                            </div>
+                                        </div>
+                                        <p class="text-slate-700 dark:text-slate-300 text-sm md:text-base mb-3 md:mb-4">
+                                            Working on some exciting new projects today! The creative process never gets old. 
+                                            Sometimes the best ideas come when you least expect them. #creativity #design #inspiration
+                                        </p>
+                                    </div>
+                                    <div class="p-2 md:p-3 border-t border-slate-100 dark:border-slate-700">
+                                        <div class="flex items-center justify-start gap-2 md:gap-4 -ml-1 md:-ml-2">
+                                            <button class="flex items-center justify-center gap-1 md:gap-1.5 px-1.5 md:px-2 py-1 md:py-1.5 rounded-full hover:bg-red-50 group cursor-pointer">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4 md:size-5 text-slate-500 group-hover:text-red-500 dark:text-slate-400">
+                                                    <path d="M0 0h24v24H0V0z" fill="none" />
+                                                    <path d="m12 21.35-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3c3.08 0 5.5 2.42 5.5 5.5 0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                                                </svg>
+                                                <p class="text-xs md:text-sm font-medium leading-normal text-slate-500 group-hover:text-red-500 dark:text-slate-400">189</p>
+                                            </button>
+                                            <button class="flex items-center justify-center gap-1 md:gap-1.5 px-1.5 md:px-2 py-1 md:py-1.5 rounded-full hover:bg-blue-50 group cursor-pointer">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4 md:size-5 text-slate-500 group-hover:text-blue-500 dark:text-slate-400">
+                                                    <path d="M0 0h24v24H0V0z" fill="none" />
+                                                    <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z" />
+                                                </svg>
+                                                <p class="text-xs md:text-sm font-medium leading-normal text-slate-500 group-hover:text-blue-500 dark:text-slate-400">32</p>
+                                            </button>
+                                            <button class="flex items-center justify-center gap-1 md:gap-1.5 px-1.5 md:px-2 py-1 md:py-1.5 rounded-full hover:bg-green-50 group cursor-pointer">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4 md:size-5 text-slate-500 group-hover:text-green-500 dark:text-slate-400">
+                                                    <path d="M0 0h24v24H0V0z" fill="none" />
+                                                    <path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.51.48 1.2.77 1.96.77 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L7.05 11.9c-.51-.48-1.2-.77-1.96-.77-1.66 0-3 1.34-3 3s1.34 3 3 3c.76 0 1.44-.3 1.96-.77l7.05 4.11c-.05.23-.09.46-.09.7 0 1.66 1.34 3 3 3s3-1.34 3-3-1.34-3-3-3z" />
+                                                </svg>
+                                                <p class="text-xs md:text-sm font-medium leading-normal text-slate-500 group-hover:text-green-500 dark:text-slate-400">18</p>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </article>
                             </div>
                         </div>
                     </main>
@@ -171,5 +180,78 @@
         </div>
     </div>
     <div id="mobile-nav-container"></div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="../utils/componentLoader.js"></script>
+    <script>
+        // Load sidebar and mobile navigation, then load profile data
+        document.addEventListener('DOMContentLoaded', async () => {
+            // Load components
+            if (window.componentLoader) {
+                const sidebarContainer = document.querySelector('#sidebar-container');
+                if (sidebarContainer) {
+                    await window.componentLoader.insert('../components/sidebar.html', sidebarContainer);
+                }
+                
+                const mobileNavContainer = document.querySelector('#mobile-nav-container');
+                if (mobileNavContainer) {
+                    await window.componentLoader.insert('../components/mobile-nav.html', mobileNavContainer);
+                }
+            }
+
+            // Load profile data from API
+            try {
+                const API_URL = 'https://7e45f5cc-358b-4334-9ad4-a06b6954fe9f.mock.pstmn.io';
+                
+                // Fetch profile data
+                const profileResponse = await axios.get(`${API_URL}/api/profile`);
+                const postsResponse = await axios.get(`${API_URL}/api/posts`);
+                
+                if (profileResponse.data && profileResponse.data.length > 0) {
+                    const profile = profileResponse.data[0]; // Use first profile as current user
+                    const posts = postsResponse.data || [];
+                    
+                    // Update profile information
+                    const nameParts = (profile.name || 'Motzzzzzzz').split(' ');
+                    const firstName = nameParts[0] || 'Motzzzzzzz';
+                    const lastName = nameParts.slice(1).join(' ') || '';
+                    const fullName = `${firstName} ${lastName}`.trim();
+                    const username = `@${firstName.toLowerCase()}${lastName.toLowerCase()}`.replace(/\s+/g, '');
+                    
+                    // Update DOM elements
+                    const profileName = document.getElementById('profile-name');
+                    const profileUsername = document.getElementById('profile-username');
+                    const profileBio = document.getElementById('profile-bio');
+                    const followersCount = document.getElementById('followers-count');
+                    const followingCount = document.getElementById('following-count');
+                    const postsCount = document.getElementById('posts-count');
+                    
+                    if (profileName) profileName.textContent = fullName;
+                    if (profileUsername) profileUsername.textContent = username;
+                    if (profileBio) profileBio.textContent = profile.bio || 'Digital creator and coffee enthusiast. Exploring the world one cup at a time.';
+                    
+                    // Update stats with realistic numbers
+                    if (followersCount) followersCount.textContent = formatNumber(profile.NumberMutualFriends || 1204);
+                    if (followingCount) followingCount.textContent = formatNumber(Math.floor(Math.random() * 800) + 200);
+                    if (postsCount) postsCount.textContent = formatNumber(posts.length || 88);
+                    
+                    console.log('Profile loaded successfully:', profile);
+                } else {
+                    console.log('Using default profile data');
+                }
+            } catch (error) {
+                console.error('Error loading profile:', error);
+                console.log('Using static profile data');
+            }
+        });
+
+        function formatNumber(num) {
+            if (num >= 1000000) {
+                return (num / 1000000).toFixed(1) + 'M';
+            } else if (num >= 1000) {
+                return (num / 1000).toFixed(1) + 'K';
+            }
+            return num.toString();
+        }
+    </script>
 </body>
 </html>
